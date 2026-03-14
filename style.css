@@ -1,6 +1,8 @@
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+html {scroll-padding-top: 700px; /* Adjust this number to match your header's height */}
+
 * {
     margin: 0;
     padding: 0;
@@ -61,7 +63,7 @@ nav {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/1600x900/?technology,code');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
     background-size: cover;
     background-position: center;
     color: white;
@@ -94,10 +96,19 @@ nav {
     background: #e68900;
 }
 
-/* About Section */
+/* Make all sections take up the full screen */
 .about, .skills, .projects, .contact {
     padding: 60px 10%;
     text-align: center;
+    
+    /* 1. Force the section to be at least the height of the screen */
+    min-height: 100vh; 
+    
+    /* 2. Use Flexbox to center the content perfectly in the middle */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-content {
@@ -256,8 +267,15 @@ body.dark-mode footer {
     z-index: 1;
 }
 
-
-
+/* Hide hamburger icon on desktop screens */
+#menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
 
 
 

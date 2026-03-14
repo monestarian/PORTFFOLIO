@@ -1,8 +1,29 @@
-// Smooth Scroll for Navigation Links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+// Smooth Scroll, Dynamic Header Offset, and Auto-Close Menu
+const header = document.querySelector('header');
+const navLinksContainer = document.querySelector('.nav-links');
+
+document.querySelectorAll('.nav-links a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
+
+        // 1. Automatically close the mobile menu when a link is clicked
+        /*if (navLinksContainer.classList.contains('show')) {
+            navLinksContainer.classList.remove('show');
+        }*/
+
+        // 2. Find the section we want to scroll to
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+
+        // 3. Dynamically measure the header's exact height in pixels
+        const headerHeight = header.offsetHeight;
+
+        // 4. Calculate the perfect scroll position (Target position MINUS Header height)
+        const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY /*- headerHeight*/;
+        
+        // 5. Scroll smoothly to that exact spot
+        window.scrollTo({
+            top: targetPosition,
             behavior: 'smooth'
         });
     });
