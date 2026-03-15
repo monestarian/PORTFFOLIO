@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shashwat Singh | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
     <!-- bar -->
     <header>
         <nav>
-            <h1 class="logo">GET TO KNOW ME</h1>
+            <h1 class="logo">Hello!</h1>
             <ul class="nav-links">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#courses">Courses</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
@@ -37,8 +41,8 @@
         </div>
         <div class="hero-text">
             <h2>Hello, I'm <span>SHASHWAT SINGH</span></h2>
-            <p>B.Tech AIML Student | Web Developer</p>
-            <a href="#projects" class="btn">View My Work</a>
+            <p>B.Tech AIML Student | Trying to learn new stuff</p>
+            <!--<a href="#projects" class="btn">View My Work</a>-->
             <a href="assets/ShashwatSingh_9.19cgpa.pdf" download class="btn">Download CV</a>
         </div>
     </section>
@@ -48,14 +52,55 @@
         <h2>About Me</h2>
         <div class="about-content">
             <img src="images/profile.jpg" alt="Profile Image">
-            <p>Hello! I am a B.Tech AI & ML student passionate about web development, programming, and building projects that solve real-world problems.</p>
+            <p>Hello! I am a B.Tech AI & ML student, I enjoy understanding how software works under the hood and try to implement my ideas through programming, and building projects that solve real-world problems.</p>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="experience">
+        <h2>Experience</h2>
+        <div class="content-container">
+            <div class="info-card">
+                <h3>Software Engineering Intern</h3>
+                <p><strong>Intelisa</strong> | Remote  | October 2025 - Present </p>
+                <ul class="info-list">
+                    <li>Developing a real-time "Impressions Algorithm" and video analytics system for Android-based edge devices.</li>
+                    <li>Engineered a persistent background service using Kotlin to capture and process video streams continuously without UI intervention.</li>
+                    <li>Integrated MediaPipe for high-performance face detection and gesture recognition, implementing logic for dynamic swipe tracking and session management.</li>
+                    <li>Optimized image processing pipelines to ensure low-latency performance on Android TV boxes.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <div class="content-container">
+            <div class="info-card">
+                <h3>B.Tech in Computer Science and Engineering (AIML)</h3>
+                <p><strong>Manipal University Jaipur</strong> | Jaipur, Rajasthan, India | August 2023-July 2027 </p>
+                <p>CGPA: 9.19</p>
+            </div>
+            
+            <div class="info-card">
+                <h3>CBSE (12th grade) </h3>
+                <p><strong>Sir Padampat Singhania Education Centre</strong> | Kanpur, Uttar Pradesh, India | May 2022</p>
+                <p>Score: 91%</p>
+            </div>
+
+            <div class="info-card">
+                <h3>CBSE (10th grade)</h3>
+                <p><strong>Sir Padampat Singhania Education Centre</strong> | Kanpur, Uttar Pradesh, India | March 2020</p>
+                <p>Score: 96%</p>
+            </div>
         </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <h2>Skills</h2>
-        <div class="skill-box">
+        <!-- <div class="skill-box">
             <div class="skill">Object-Oriented Programming</div>
             <div class="skill">Data Structures and Algorithms</div>
             <div class="skill">RDBMS</div>
@@ -66,6 +111,49 @@
             <div class="skill">Statistics & Probability</div>
             <div class="skill">Software Engineering and Project Management</div>
 
+        </div> -->
+        <div class="skills-accordion">
+    
+            <details class="skill-category">
+                <summary>AI & Machine Learning</summary>
+                <ul>
+                    <li>Machine Learning Algorithms</li>
+                    <li>Computer Vision & OpenCV</li>
+                </ul>
+            </details>
+
+            <details class="skill-category">
+                <summary>Programming & Core</summary>
+                <ul>
+                    <li>Python</li>
+                    <li>C++</li>
+                    <li>Object-Oriented Programming</li>
+                    <li>Data Structures and Algorithms (DSA)</li>
+                    <li>Automata Theory</li>
+                    
+                </ul>
+            </details>
+
+            <details class="skill-category">
+                <summary>Development & Tools</summary>
+                <ul>
+                    <li>Android Development</li>
+                    <li>Relational Database Management Systems (RDBMS)</li>
+                    <li>Git & GitHub</li>
+                    <li>Linux</li>
+                    <li>Matlab</li>
+
+                </ul>
+            </details>
+
+            <!--<details class="skill-category">
+                <summary>Group Projects</summary>
+                <ul>
+                    <li>Smart Price Tracker & Trend Analyzer</li>
+                    <li>ARGO Float Dashboard to monitor ocean</li>
+                </ul>
+            </details>-->
+
         </div>
     </section>
 
@@ -73,32 +161,174 @@
     <section id="projects" class="projects">
         <h2>Projects</h2>
         <div class="project-container">
+            
+            <div class="project-card">
+                <h3>Remote Sensing GIS Tool</h3>
+                <p><strong>GIS for Remote Sensing Data, Ongoing Project</strong><br>
+                <em>under IIRS Scientist guidance</em></p>
+                <ul class="info-list">
+                    <li>Fully open source<br>easy to use alternative for hyperspectral data manipulation.</li>
+                    <li>The tool aims to bring a much more user friendly UI experience while condensing useful features from different platforms like QGIS, ArcGIS and ENVI in an easy-to-use tool</li>
+                    <li>The tool would help to utilize and apply newer Machine Learning paradigms like Neural Networks for processing of Remote Sensing data.</li>
+                </ul>
+            </div>
+            
             <div class="project-card">
                 <h3>Glare Prevention Screen</h3>
-                    <p>#Filed a patent for this project. Designed a real-time anti-glare system using eye and glare tracking to dynamically dim
-                    bright sources in drivers’ view, maintaining &lt;100ms latency.<br><br>
-                    #Implemented eye-tracking and glare detection using OpenCV (Viola-Jones, Canny Edge) and integrated CMOS
-                    cameras with LCD for adaptive glare reduction, achieving a 94% glare detection rate and 92% eye detection
-                    accuracy.<br><br>
-                    #Conducted use-case testing improving system stability by 30%, optimized performance, and explored 3 advanced
-                    technologies PDLC, SPD, and electrochromic films for advanced automotive display solutions.</p>
-                <a href="https://github.com/monestarian/Glare-Prevention-Screen" class="btn">View</a>
+                <p><strong>Computer Vision, Deep Learning, Hardware implementation</strong></p>
+                <ul class="info-list">
+                    <li>Filed a patent for this project. Designed a real-time anti-glare system using eye and glare tracking to dynamically dim bright sources in drivers' view, maintaining &lt;100ms latency</li>
+                    <li>Implemented eye-tracking and glare detection using OpenCV (Viola-Jones, Canny Edge) and integrated CMOS cameras with LCD for adaptive glare reduction, achieving a 94% glare detection rate and 92% eye detection accuracy.</li>
+                    <li>Conducted use-case testing improving system stability by 30%, optimized performance, and explored 3 advanced technologies PDLC, SPD, and electrochromic films for advanced automotive display solutions.</li>
+                </ul>
             </div>
+
             <div class="project-card">
-                <h3>Web Scraper</h3>
-                    <p>#Architected a full-stack price tracking application to automatically scrape and log product data from e-commerce URLs,
-                     providing users with historical price trends through an interactive dashboard.<br><br>
-                    #Engineered a Python web scraping service using BeautifulSoup to extract product prices from user-submitted URLs, 
-                    implementing a scheduled daily job that successfully logged over 1,000 price points across multiple products within
-                     the first month.<br><br>
-                    #Developed a backend to manage tracked products in a MongoDB database, serving historical price data to the
-                    front-end with an average response time under 200ms.<br><br>
-                    #Constructed a responsive user interface with React.js and Recharts, enabling users to add new products via URL and
-                    view interactive charts that visualize price history, achieving a 98% data accuracy rate on tracked items.</p>
-                <a href="https://github.com/monestarian/E-Commerce-Price-Tracker-Trend-Analyzer" class="btn">View</a>
+                <h3>E-Commerce Price Tracker & Trend Analyzer</h3>
+                <p><strong>Full-Stack Web Application</strong><br></p>
+                <ul class="info-list">
+                    <li>Architected a full-stack price tracking application to automatically scrape and log product data from e-commerce URLs, providing users with historical price trends through an interactive dashboard.</li>
+                    <li>Engineered a Python web scraping service using BeautifulSoup to extract product prices from user-submitted URLs.</li>
+                    <li>Developed a backend to manage tracked products in a MongoDB database, serving historical price data to the front-end with an average response time under 200ms.</li>
+                    <li>Constructed a responsive user interface with React.js and Recharts, enabling users to add new products via URL and view interactive charts that visualize price history on tracked items.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" class="achievements">
+        <h2>Achievements</h2>
+        <div class="content-container">
+            <div class="info-card">
+                <ul class="info-list">
+                    <li>Filing Patent for Dynamic Technological Solution for Real-World-Problem of Windshield Glares</li>
+                    <li>2 x Dean's Honor List (Highest GPA)</li>
+                    <li>2 x NPTEL Elite Category</li>
+                </ul>
             </div>
         </div>
     </section>
+
+    <!-- Courses -->
+    <section id="courses" class="courses">
+        <h2>Courses & Certifications</h2>
+        <div class="skills-accordion">
+            
+            <details class="skill-category">
+                <summary>University Courses</summary>
+                <ul>
+                    <li>Machine Learning</li>
+                    <li>Object-Oriented Programming</li>
+                    <li>Operating Systems</li>
+                    <li>DAA</li>
+                    <li>Cloud Computing</li>
+                    <li>Data Structures and Algorithms</li>
+                    <li>MATLAB</li>
+                    <li>Statistics & Probability</li>
+                    <li>Software Engineering and Project Management</li>
+                    <li>Computer Networks</li>
+                    <li>Information Theory and Coding</li>
+                    <li>RDBMS</li>
+                </ul>
+            </details>
+
+            <details class="skill-category">
+                <summary>Certifications & Additional Training</summary>
+                <ul>
+                    <li>Cisco Python Essentials 1 & 2</li>
+                    <div class="badge-grid">
+                        <div class="badge-wrapper">
+                            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="7e2cba0b-de74-4fbe-b5f3-3c3155aa42ac"
+                            data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async 
+                            src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                        </div>
+
+                        <div class="badge-wrapper">
+                            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="044389a9-93a6-4d89-aeb2-51b96b770220"
+                            data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async 
+                            src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                        </div>
+                    </div>
+
+                    <li>Red Hat System Administration I (RH124) & II (RH134) - Ver.9.3.</li>
+                    <div class="badge-grid">
+                        <div class="badge-wrapper">
+                            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="b5d81d2a-2f12-44a9-b642-c33cab6382a8" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                        </div>
+
+                        <div class="badge-wrapper">
+                            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="c6380a8b-b490-4f8f-8a0f-3f64299f2c65" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                        </div>
+                    </div>
+
+                    <li>Cisco CCNA: Switching. Routing, and Wireless Essentials</li>
+                    <div class="badge-grid">
+                        <div class="badge-wrapper">
+                            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="9cd65d00-fc14-4cc6-97ea-29947d10cfc2" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                        </div>
+                    </div>
+
+                    <li>Cisco Network Technician Career Path</li>
+                    <div class="badge-grid">
+                        <div class="badge-wrapper">
+                            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="8e880933-c10c-46c4-84f1-46bd020319e6" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>    
+                        </div>
+                    </div>
+                    
+                    <li>NPTEL DSA in Java</li>
+                    <div class="badge-grid">
+                        <div class="badge-wrapper">
+                            <a href="https://archive.nptel.ac.in/content/noc/NOC24/SEM2/Ecertificates/106/noc24-cs96/Course/NPTEL24CS96S35180188804295900.pdf" target="_blank" class="custom-badge">
+                                <div class="badge-top nptel-theme">
+                                    <span class="issuer">NPTEL</span>
+                                    <span class="award">Elite</span>
+                                </div>
+                                <div class="badge-bottom">
+                                    <div class="badge-icon">💻</div>
+                                    <p class="badge-course">DSA in Java</p>
+                                </div>
+                            </a>                        </div>
+                    </div>
+
+                    <li>NPTEL Design and Analysis of Algorithms (DAA)</li>
+                    <div class="badge-grid">
+                        <div class="badge-wrapper">
+                           <a href="https://archive.nptel.ac.in/content/noc/NOC25/SEM1/Ecertificates/106/noc25-cs23/Course/NPTEL25CS23S44270223501377256.pdf" target="_blank" class="custom-badge">
+                                <div class="badge-top nptel-theme">
+                                    <span class="issuer">NPTEL</span>
+                                </div>
+                                <div class="badge-bottom">
+                                    <div class="badge-icon">⚙️</div>
+                                    <p class="badge-course">Design and Analysis of Algorithms (DAA)</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <li>NPTEL Introduction to Machine Learning.</li>
+                    <div class="badge-grid">
+                        <div class="badge-wrapper">
+                            <a href="https://archive.nptel.ac.in/content/noc/NOC25/SEM2/Ecertificates/106/noc25-cs91/Course/NPTEL25CS91S35990024910851493.pdf" target="_blank" class="custom-badge">
+                                <div class="badge-top nptel-theme">
+                                    <span class="issuer">NPTEL</span>
+                                    <span class="award">Elite</span> </div>
+                                <div class="badge-bottom">
+                                    <div class="badge-icon">🎓</div>
+                                    <p class="badge-course">Introduction to Machine Learning</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--<li>Deep Learning & Computer Vision using Python</li>-->
+                </ul>
+            </details>
+
+        </div>
+    </section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="contact">

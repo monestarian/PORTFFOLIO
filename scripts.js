@@ -19,7 +19,7 @@ document.querySelectorAll('.nav-links a').forEach(anchor => {
         const headerHeight = header.offsetHeight;
 
         // 4. Calculate the perfect scroll position (Target position MINUS Header height)
-        const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY /*- headerHeight*/;
+        const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - 15 /*- headerHeight*/;
         
         // 5. Scroll smoothly to that exact spot
         window.scrollTo({

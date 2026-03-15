@@ -97,7 +97,7 @@ nav {
 }
 
 /* Make all sections take up the full screen */
-.about, .skills, .projects, .contact {
+.about, .skills, .projects, .contact, .experience, .education, .achievements, .courses {
     padding: 60px 10%;
     text-align: center;
     
@@ -213,6 +213,25 @@ body.dark-mode .project-card {
 body.dark-mode footer {
     background: #1e1e1e;
 }
+/* Dark Mode Support for the new blocks */
+body.dark-mode .skill-category {
+    background: #333;
+}
+body.dark-mode .skill-category ul {
+    background: #1e1e1e;
+}
+/* Add .info-card to your existing dark mode rules so the new cards switch themes too */
+body.dark-mode .info-card {
+    background: #2a2a2a;
+    color: white;
+}
+body.dark-mode .info-card p {
+    color: #ddd; /* Lighter grey for paragraph text in dark mode */
+}
+/* Ensures Dark Mode doesn't override the white badge background */
+body.dark-mode .badge-wrapper {
+    background-color: #ffffff !important;
+}
 
 
 
@@ -266,6 +285,197 @@ body.dark-mode footer {
     background: rgba(0, 0, 0, 0.5); /* Dark overlay for text visibility */
     z-index: 1;
 }
+
+/* Layout for the new content sections */
+.content-container {
+    width: 100%;
+    max-width: 800px; /* Keeps the text from stretching too wide on large screens */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Card styling for Experience, Education, and Achievements */
+.info-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.info-card h3 {
+    margin-bottom: 5px;
+    color: #ff9800; /* Use your accent color for titles */
+}
+
+.info-card p {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* List styling inside the cards */
+.info-list {
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.info-list li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Accordion Container */
+.skills-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 600px; /* Keeps the blocks from stretching too wide */
+    margin: 0 auto;
+}
+
+/* The Clickable Block */
+.skill-category {
+    background: #222;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* The Visible Title (The Button) */
+.skill-category summary {
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none; /* Removes the default tiny arrow */
+    transition: background 0.3s;
+}
+
+.skill-category summary:hover {
+    background: #ff9800; /* Orange hover effect */
+}
+
+/* Remove default arrow in Safari /
+.skill-category summary::-webkit-details-marker {
+    display: none; 
+}*/
+
+/* The Hidden List Items */
+.skill-category ul {
+    padding: 10px 20px 20px 40px; /* Indents the bullet points */
+    background: #2a2a2a; /* Slightly lighter background for the dropdown area */
+    margin: 0;
+}
+
+.skill-category li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+
+/* Credly Badge Layout */
+.badge-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Adds space between multiple badges */
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* The White Background Box */
+.badge-wrapper {
+    background-color: #ffffff !important; /* Forces it to stay white */
+    padding: 10px; /* Gives the badge some breathing room */
+    border-radius: 10px; /* Soft edges to match your project cards */
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* Adds a slight drop shadow */
+}
+
+
+/* Custom CSS Badges (For NPTEL, etc.) */
+.custom-badge {
+    display: flex;
+    flex-direction: column;
+    width: 150px; /* Matches the width of your Credly badges */
+    height: 180px; 
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    text-decoration: none; /* Removes the underline from the link */
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.custom-badge:hover {
+    transform: translateY(-5px); /* Makes the badge "lift" when hovered */
+    box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+}
+
+/* The colored top half of the badge */
+.badge-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    height: 40px;
+}
+
+/* NPTEL specific branding colors (Blue) */
+.nptel-theme {
+    background: #1e3a8a; 
+}
+
+.award {
+    background: #fbbf24; /* Gold/Yellow for Elite status */
+    color: #000;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 0.65rem;
+}
+
+/* The white bottom half of the badge */
+.badge-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    height: 140px;
+}
+
+.badge-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.badge-course {
+    font-size: 0.8rem;
+    color: #333;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Ensure text stays dark on the white badge even in Dark Mode */
+body.dark-mode .custom-badge .badge-course {
+    color: #333;
+}
+
+
+
+
+
 
 /* Hide hamburger icon on desktop screens */
 #menu-toggle {
